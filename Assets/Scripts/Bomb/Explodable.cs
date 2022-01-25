@@ -10,8 +10,6 @@ namespace Bomb
 		
 		public void Explode()
 		{
-			Debug.Log("Exploding!");
-            
 			// Disable collisions on the explosive so that projectiles don't immediately destroy
 			if (TryGetComponent(typeof(BoxCollider2D), out Component component))
 			{
@@ -28,7 +26,7 @@ namespace Bomb
 				if (projectilePrefab.gameObject.TryGetComponent(typeof(ProjectileMovement),
 					out Component projMovementComponent))
 				{
-					((ProjectileMovement)projMovementComponent).movementDirection = direction;
+					((ProjectileMovement) projMovementComponent).movementDirection = direction;
 				}
 				Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 			}

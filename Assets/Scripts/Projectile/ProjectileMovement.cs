@@ -1,24 +1,32 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using Bomb;
 using UnityEngine;
 
-public class ProjectileMovement : MonoBehaviour
+namespace Projectile
 {
-    [SerializeField] private float movementSpeed = 0.05f;
-    private void Start()
+    public class ProjectileMovement : MonoBehaviour
     {
-        Debug.Log("Started!");
-    }
-    private void FixedUpdate()
-    {
-        Rigidbody2D rb2d = this.GetComponent<Rigidbody2D>();
-        rb2d.MovePosition(this.transform.position + new Vector3(movementSpeed, 0, 0));
-    }
+        [SerializeField] private float movementSpeed = 0.05f;
+        [SerializeField] public Vector3 movementDirection;
+        private void FixedUpdate()
+        {
+            Rigidbody2D rb2d = GetComponent<Rigidbody2D>();
+            rb2d.MovePosition(transform.position + movementDirection * movementSpeed);
+        }
     
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log($"{other.name} collided with me! Bye!");
-        Destroy(gameObject);
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            // Don't collide with other projectiles
+            if (other.tag.Equals("Projectile")) return;
+            
+            // Make bombs explode on collision
+            if (other.gameObject.TryGetComponent(typeof(BombLogic), out Component component))
+            {
+                ((BombLogic)component).Explode();
+            }
+
+            // Debug.Log($"Projectile collided with '{other.name}' and de-spawned.");
+            Destroy(gameObject);
+        }
     }
 }

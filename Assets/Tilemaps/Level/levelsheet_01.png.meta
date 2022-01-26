@@ -238,7 +238,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -246,6 +246,48 @@ TextureImporter:
       bones: []
       spriteID: ac1fcb94002c8f243b186a7e6eef7ccb
       internalID: -1552021837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: levelsheet_01_mover_vert
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 208
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259a501cdca477d479870fd8a6af7c8c
+      internalID: 1944663254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: levelsheet_01_mover_horiz
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23dc96689165304491e8538ee122116
+      internalID: 1430647869
       vertices: []
       indices: 
       edges: []
@@ -261,11 +303,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      levelsheet_01_mover_horiz: 1430647869
       levelsheet_01_fire: -2093369203
       levelsheet_01_start: -1342095412
       levelsheet_01_floor: 1336004106
       levelsheet_01_bomb: 1752700687
       levelsheet_01_finish: 187002620
+      levelsheet_01_mover_vert: 1944663254
       levelsheet_01_breakable: -1552021837
       levelsheet_01_wall: 2009112061
   spritePackingTag: 

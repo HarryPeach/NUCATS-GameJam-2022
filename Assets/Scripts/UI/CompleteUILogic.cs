@@ -1,3 +1,4 @@
+using Audio;
 using Scene;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,8 @@ namespace UI
     {
         // The scene to load as the next level
         [SerializeField] private string sceneToLoad;
+        // The sound to play when a level is completed
+        [SerializeField] private AudioClip completeSound;
         // The root element of the UI
         private VisualElement _root;
         // The button to open the next level
@@ -39,6 +42,7 @@ namespace UI
         {
             _root.visible = true;
             SceneLogic.UIShown = true;
+            SoundManager.Inst.Play(completeSound);
         }
     }
 }

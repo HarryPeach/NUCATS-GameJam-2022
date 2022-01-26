@@ -3911,6 +3911,10 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: Level1
       objectReference: {fileID: 0}
+    - target: {fileID: 8463429271046732402, guid: aaa49b4c4f6dc754ebe4177d0bdf39c8, type: 3}
+      propertyPath: completeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 77b830b46929e674a85238c861753b90, type: 3}
     - target: {fileID: 8463429271046732403, guid: aaa49b4c4f6dc754ebe4177d0bdf39c8, type: 3}
       propertyPath: m_Name
       value: '[UI] Complete'

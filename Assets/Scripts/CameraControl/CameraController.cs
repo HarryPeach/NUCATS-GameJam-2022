@@ -1,3 +1,4 @@
+using Scene;
 using UnityEngine;
 
 namespace CameraControl
@@ -26,6 +27,7 @@ namespace CameraControl
 
         private void Update()
         {
+            if (SceneLogic.UIShown) return;
             DragCamera();
             ZoomCamera();
         }

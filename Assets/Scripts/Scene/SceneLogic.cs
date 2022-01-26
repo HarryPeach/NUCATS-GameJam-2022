@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using Finish_Object;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -12,7 +14,9 @@ namespace Scene
         // The prefab to spawn on click
         [SerializeField] private GameObject spawnPrefab;
         // The max amount of bombs allowed for the level
-        [SerializeField] private int bombMax;
+        [SerializeField] private int bombMax = 99;
+        // Amount of flags required to complete a level
+        [SerializeField] private List<GameObject> flags;
 
         // The amount of bombs that have been placed
         private int _bombsPlaced = 0;
@@ -23,9 +27,24 @@ namespace Scene
 
         private void Update()
         {
-            if (!Input.GetMouseButtonUp(0)) return;
             if (UIShown) return;
+            CheckFlags();
+            
+            if (!Input.GetMouseButtonUp(0)) return;
             PlaceBomb();
+        }
+
+        /// <summary>
+        /// Checks whether the required flags for the level to be complete have been activated
+        /// </summary>
+        private void CheckFlags()
+        {
+            int count = flags.Select(flag => flag.GetComponent<FinishLogic>())
+                .Count(fl => fl.activated);
+            if (count != flags.Count) return;
+            
+            UIShown = true;
+            Debug.Log("Game complete!");
         }
 
         /// <summary>

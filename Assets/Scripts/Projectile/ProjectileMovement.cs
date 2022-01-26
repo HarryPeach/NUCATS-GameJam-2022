@@ -1,6 +1,7 @@
 using System;
 using Bomb;
 using Breakable;
+using Finish_Object;
 using UnityEngine;
 
 namespace Projectile
@@ -30,6 +31,12 @@ namespace Projectile
             if (other.gameObject.TryGetComponent(typeof(BreakableLogic), out Component breakableComponent))
             {
                 ((BreakableLogic) breakableComponent).Attack();
+            }
+            
+            // Make flags activate objects take damage
+            if (other.gameObject.TryGetComponent(typeof(FinishLogic), out Component flagComponent))
+            {
+                ((FinishLogic) flagComponent).Attack();
             }
 
             // Debug.Log($"Projectile collided with '{other.name}' and de-spawned.");

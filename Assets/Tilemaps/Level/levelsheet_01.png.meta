@@ -259,7 +259,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,7 +280,7 @@ TextureImporter:
         width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,6 +288,27 @@ TextureImporter:
       bones: []
       spriteID: b23dc96689165304491e8538ee122116
       internalID: 1430647869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: levelsheet_01_finish_green
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a237a46ab07bf48888b83bb772c974
+      internalID: 1962345365
       vertices: []
       indices: 
       edges: []
@@ -303,6 +324,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      levelsheet_01_finish_green: 1962345365
       levelsheet_01_mover_horiz: 1430647869
       levelsheet_01_fire: -2093369203
       levelsheet_01_start: -1342095412

@@ -2307,6 +2307,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPrefab: {fileID: 2307078665475592381, guid: b991ff3489ee8d0459044cdec298afbb, type: 3}
   bombMax: 5
+  flags:
+  - {fileID: 0}
 --- !u!114 &666602032
 MonoBehaviour:
   m_ObjectHideFlags: 0

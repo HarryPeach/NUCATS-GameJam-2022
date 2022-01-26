@@ -1,4 +1,5 @@
 ﻿using System;
+using Scene;
 using UnityEngine;
 
 namespace Bomb.StartBomb
@@ -8,7 +9,7 @@ namespace Bomb.StartBomb
 		private void Update()
 		{
 			// TODO (hpeach): Remove temporary way to detonate first bomb
-			if (Input.GetMouseButtonUp(1))
+			if (Input.GetMouseButtonUp(1) && !SceneLogic.UIShown)
 			{
 				Explode();
 			}

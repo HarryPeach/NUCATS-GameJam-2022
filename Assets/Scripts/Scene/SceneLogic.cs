@@ -1,4 +1,9 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 namespace Scene
 {
@@ -12,9 +17,14 @@ namespace Scene
         // The amount of bombs that have been placed
         private int _bombsPlaced = 0;
         
+        // Whether a UI screen is currently being shown
+        // This is a hacky way to disable click-throughs when UI is visible
+        public static bool UIShown = true;
+
         private void Update()
         {
             if (!Input.GetMouseButtonUp(0)) return;
+            if (UIShown) return;
             PlaceBomb();
         }
 

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13966, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SampleLevel
+  m_Name: Template
   m_EditorClassIdentifier: 
   templateScene: {fileID: 102900000, guid: aa500be8b3a450e469027103cf0e0560, type: 3}
   templateName: 
@@ -28,24 +28,28 @@ MonoBehaviour:
   - dependency: {fileID: 7433441132597879392, guid: be2ab4051bfd34141ad8c8207d551b89, type: 3}
     instantiationMode: 1
   - dependency: {fileID: 7022743707583349716, guid: a8cddd111a5936445a5ce41f98661bf4, type: 3}
-    instantiationMode: 0
+    instantiationMode: 1
+  - dependency: {fileID: 8463429271046732403, guid: aaa49b4c4f6dc754ebe4177d0bdf39c8, type: 3}
+    instantiationMode: 1
   - dependency: {fileID: 11400000, guid: bd108088826e6884da9d443de1bb11b5, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 585920aa536defa4e880df24d09ea1aa, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 7055878650897374978, guid: 27acd9873e3f6f64abd39e1b05295da3, type: 3}
-    instantiationMode: 0
+    instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 4919526c6d5eb4e4f902680d31347b85, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 50a26c982e8bbce4784fd6ddb2a0fa36, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 2307078665475592381, guid: b991ff3489ee8d0459044cdec298afbb, type: 3}
-    instantiationMode: 0
+    instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 61aa223a3c55fcb4380164364c709fa9, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 516c1eda03ba7ba4aa0d0a0648a2b2fa, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: e17321991d647054d9a7e370c41b033f, type: 2}
+    instantiationMode: 1
+  - dependency: {fileID: 252391541870805714, guid: 4222d67f1b691f14dad2f7ead2f46e02, type: 3}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: f86ea11779c0e57438af253d3423b8bd, type: 2}
     instantiationMode: 1
@@ -59,25 +63,25 @@ MonoBehaviour:
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: efaa347e112c0f0418ac40c5d57fcf2c, type: 2}
     instantiationMode: 1
-  - dependency: {fileID: 9197481963319205126, guid: 67f45b73e6c2f5e48bbb0afac968366c, type: 3}
+  - dependency: {fileID: 11400000, guid: 0a5188b22b430ca4eafb12895c323e01, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 11c10b4fc14157a4db4e2438d0fa0d31, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 3019780773d17744b873598ce96545c5, type: 2}
     instantiationMode: 1
-  - dependency: {fileID: 11400000, guid: 0a5188b22b430ca4eafb12895c323e01, type: 2}
+  - dependency: {fileID: 9197481963319205126, guid: 67f45b73e6c2f5e48bbb0afac968366c, type: 3}
     instantiationMode: 1
   - dependency: {fileID: -4733365628477956816, guid: c8b8fabd83a484c4fbe7985b999e9113, type: 3}
     instantiationMode: 1
   - dependency: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    instantiationMode: 0
+    instantiationMode: 1
   - dependency: {fileID: 2800000, guid: aa4b7187558e19d4196552c1fe78b4d9, type: 3}
-    instantiationMode: 0
-  - dependency: {fileID: 11400000, guid: fd787807b573a2f45b06480acc9712ca, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 16e558bf3587429468794d8f61e110d7, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 5d365b1b4d86f3846851b3295cc87719, type: 2}
+    instantiationMode: 1
+  - dependency: {fileID: 11400000, guid: fd787807b573a2f45b06480acc9712ca, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 4a2249140cf2ec849b88934187bf84b9, type: 2}
     instantiationMode: 1
@@ -88,6 +92,6 @@ MonoBehaviour:
   - dependency: {fileID: 11400000, guid: d24c9bd35469a9c48afff60f713194fd, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 7851226786825768946, guid: 3515e69bee8b6b24abaf1e0663d57847, type: 3}
-    instantiationMode: 0
+    instantiationMode: 1
   templatePipeline: {fileID: 0}
   addToDefaults: 0

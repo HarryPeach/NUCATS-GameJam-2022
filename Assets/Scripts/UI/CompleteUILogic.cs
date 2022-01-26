@@ -1,5 +1,6 @@
 using Scene;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace UI
@@ -19,16 +20,16 @@ namespace UI
 
             _nextButton = _root.Q<Button>("nextButton");
 
-            _nextButton.clicked += nextLevel;
+            _nextButton.clicked += NextLevel;
             _root.visible = false;
         }
 
         /// <summary>
         ///  Loads the next level
         /// </summary>
-        private void nextLevel()
+        private void NextLevel()
         {
-            Debug.Log("Next Level");
+            SceneManager.LoadScene(sceneToLoad);
         }
 
         /// <summary>

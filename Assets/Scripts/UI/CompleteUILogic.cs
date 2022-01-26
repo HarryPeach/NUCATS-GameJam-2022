@@ -6,6 +6,8 @@ namespace UI
 {
     public class CompleteUILogic : MonoBehaviour
     {
+        // The scene to load as the next level
+        [SerializeField] private string sceneToLoad;
         // The root element of the UI
         private VisualElement _root;
         // The button to open the next level

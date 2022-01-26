@@ -8,10 +8,25 @@ namespace UI
     {
         // The root element of the UI
         private VisualElement _root;
+        // The button to open the next level
+        private Button _nextButton;
+        
         private void Start()
         {
             _root = GetComponent<UIDocument>().rootVisualElement;
+
+            _nextButton = _root.Q<Button>("nextButton");
+
+            _nextButton.clicked += nextLevel;
             _root.visible = false;
+        }
+
+        /// <summary>
+        ///  Loads the next level
+        /// </summary>
+        private void nextLevel()
+        {
+            Debug.Log("Next Level");
         }
 
         /// <summary>

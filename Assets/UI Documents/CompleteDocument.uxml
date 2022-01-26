@@ -3,7 +3,7 @@
     <ui:VisualElement class="backdrop" style="width: 100%; height: 100%;">
         <ui:VisualElement class="card">
             <ui:Label text="Level Complete!" display-tooltip-when-elided="true" class="title" />
-            <ui:Button text="Next Level" display-tooltip-when-elided="true" class="default-button" />
+            <ui:Button text="Next Level" display-tooltip-when-elided="true" name="nextButton" class="default-button" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

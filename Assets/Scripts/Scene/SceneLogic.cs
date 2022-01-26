@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Audio;
 using Finish_Object;
 using UI;
 using UnityEngine;
@@ -17,6 +18,7 @@ namespace Scene
         [SerializeField] private List<GameObject> flags;
         // The screen to show when the level is over
         [SerializeField] private UIDocument completeScreen;
+
 
         // The amount of bombs that have been placed
         private int _bombsPlaced = 0;

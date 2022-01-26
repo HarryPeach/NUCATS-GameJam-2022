@@ -149,3 +149,4 @@ MonoBehaviour:
   projectilePrefab: {fileID: 7851226786825768946, guid: 3515e69bee8b6b24abaf1e0663d57847, type: 3}
   spread: 8
   explosionSound: {fileID: 8300000, guid: cfe1cf8b87672364b914af39fa94c3a8, type: 3}
+  placeSound: {fileID: 8300000, guid: 8f7bfa30234da8c42a942499abded4f2, type: 3}

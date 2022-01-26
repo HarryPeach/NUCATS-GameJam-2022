@@ -1,15 +1,24 @@
-﻿using Audio;
+﻿using System;
+using Audio;
 using Projectile;
 using UnityEngine;
 
 namespace Bomb
 {
+	[RequireComponent(typeof(ParticleSystem))]
 	public class Explodable : MonoBehaviour
 	{
 		[SerializeField] private GameObject projectilePrefab;
 		[SerializeField] private int spread = 8;
 		[SerializeField] private AudioClip explosionSound;
-		
+
+		private ParticleSystem _particleSystem;
+
+		private void Awake()
+		{
+			_particleSystem = GetComponent<ParticleSystem>();
+		}
+
 		public void Explode()
 		{
 			// Disable collisions on the explosive so that projectiles don't immediately destroy
@@ -34,8 +43,11 @@ namespace Bomb
 			}
 			
 			SoundManager.Inst.Play(explosionSound);
-            
-			Destroy(gameObject);
+			_particleSystem.Play();
+			
+			// Done this way so that the particle system isn't destroyed before it's finished
+			GetComponent<SpriteRenderer>().enabled = false;
+			Destroy(gameObject, 1f);
 		}
 	}
 }

@@ -1,10 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Finish_Object;
+using UI;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 namespace Scene
@@ -17,6 +15,8 @@ namespace Scene
         [SerializeField] private int bombMax = 99;
         // Amount of flags required to complete a level
         [SerializeField] private List<GameObject> flags;
+        // The screen to show when the level is over
+        [SerializeField] private UIDocument completeScreen;
 
         // The amount of bombs that have been placed
         private int _bombsPlaced = 0;
@@ -44,7 +44,7 @@ namespace Scene
             if (count != flags.Count) return;
             
             UIShown = true;
-            Debug.Log("Game complete!");
+            completeScreen.GetComponent<CompleteUILogic>().ShowScreen();
         }
 
         /// <summary>

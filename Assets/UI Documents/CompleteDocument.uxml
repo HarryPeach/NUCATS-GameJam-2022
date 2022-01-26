@@ -1,10 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Documents/USS%20Files/cire.uss?fileID=7433441132597879392&amp;guid=be2ab4051bfd34141ad8c8207d551b89&amp;type=3#cire" />
-    <ui:VisualElement class="backdrop">
+    <ui:VisualElement class="backdrop" style="width: 100%; height: 100%;">
         <ui:VisualElement class="card">
-            <ui:Label text="Level Tip" display-tooltip-when-elided="true" class="title" />
-            <ui:Label text="[#leveltip]" display-tooltip-when-elided="true" name="tipLabel" style="white-space: normal; -unity-text-align: upper-center;" />
-            <ui:Button text="Begin Level" display-tooltip-when-elided="true" name="closeButton" class="default-button" />
+            <ui:Label text="Level Complete!" display-tooltip-when-elided="true" class="title" />
+            <ui:Button text="Next Level" display-tooltip-when-elided="true" class="default-button" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

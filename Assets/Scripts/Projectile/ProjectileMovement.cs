@@ -1,5 +1,6 @@
 using System;
 using Bomb;
+using Breakable;
 using UnityEngine;
 
 namespace Projectile
@@ -20,9 +21,15 @@ namespace Projectile
             if (other.tag.Equals("Projectile")) return;
             
             // Make bombs explode on collision
-            if (other.gameObject.TryGetComponent(typeof(BombLogic), out Component component))
+            if (other.gameObject.TryGetComponent(typeof(BombLogic), out Component bombComponent))
             {
-                ((BombLogic)component).Explode();
+                ((BombLogic)bombComponent).Explode();
+            }
+            
+            // Make breakable objects take damage
+            if (other.gameObject.TryGetComponent(typeof(BreakableLogic), out Component breakableComponent))
+            {
+                ((BreakableLogic) breakableComponent).Attack();
             }
 
             // Debug.Log($"Projectile collided with '{other.name}' and de-spawned.");

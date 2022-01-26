@@ -229,6 +229,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: levelsheet_01_breakable
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1fcb94002c8f243b186a7e6eef7ccb
+      internalID: -1552021837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -245,6 +266,7 @@ TextureImporter:
       levelsheet_01_floor: 1336004106
       levelsheet_01_bomb: 1752700687
       levelsheet_01_finish: 187002620
+      levelsheet_01_breakable: -1552021837
       levelsheet_01_wall: 2009112061
   spritePackingTag: 
   pSDRemoveMatte: 0

@@ -1,4 +1,5 @@
-﻿using Projectile;
+﻿using Audio;
+using Projectile;
 using UnityEngine;
 
 namespace Bomb
@@ -7,6 +8,7 @@ namespace Bomb
 	{
 		[SerializeField] private GameObject projectilePrefab;
 		[SerializeField] private int spread = 8;
+		[SerializeField] private AudioClip explosionSound;
 		
 		public void Explode()
 		{
@@ -30,6 +32,8 @@ namespace Bomb
 				}
 				Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 			}
+			
+			SoundManager.Inst.Play(explosionSound);
             
 			Destroy(gameObject);
 		}

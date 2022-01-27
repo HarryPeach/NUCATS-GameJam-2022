@@ -41,6 +41,12 @@ namespace Scene
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
             
+            if (Input.GetKeyUp(KeyCode.M))
+            {
+                Debug.Log("Toggling music");
+                SoundManager.Inst.ToggleMusic();
+            }
+            
             CheckFlags();
             
             if (!Input.GetMouseButtonUp(0)) return;
@@ -87,8 +93,11 @@ namespace Scene
                 new Rect(10, 10, 200, 20),
                 $"Bombs: ({_bombsPlaced}/{bombMax})", guiStyle);
             GUI.Label(
-                new Rect(10, Screen.height - 20, 200, 20), 
+                new Rect(10, Screen.height - 40, 200, 20), 
                 "Press R to reset the level", guiStyle);
+            GUI.Label(
+                new Rect(10, Screen.height - 20, 200, 20), 
+                "Press M to toggle music", guiStyle);
         }
     }
 }

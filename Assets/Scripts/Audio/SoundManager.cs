@@ -16,7 +16,7 @@ namespace Audio
             if (Inst == null)
             {
                 Inst = this;
-                PlayMusic();
+                musicSource.Play();
             }else if (Inst != this)
             {
                 Destroy(gameObject);
@@ -32,10 +32,17 @@ namespace Audio
             effectsSource.pitch = pitch;
             effectsSource.Play();
         }
-        
-        private void PlayMusic()
+
+        public void ToggleMusic()
         {
-            musicSource.Play();
+            if (musicSource.isPlaying)
+            {
+                musicSource.Pause();
+            }
+            else
+            {
+                musicSource.Play();
+            }
         }
     }
 }

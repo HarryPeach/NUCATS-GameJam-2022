@@ -20,6 +20,8 @@ namespace Scene
         [SerializeField] private List<GameObject> flags;
         // The screen to show when the level is over
         [SerializeField] private UIDocument completeScreen;
+        // The font to use when drawing text
+        [SerializeField] private GUIStyle guiStyle;
 
 
         // The amount of bombs that have been placed
@@ -84,12 +86,13 @@ namespace Scene
         
         private void OnGUI()
         {
+            // GUI.skin.font = font;
             GUI.Label(
-                new Rect(10, 10, 100, 20),
-                $"Bombs: ({_bombsPlaced}/{bombMax})");
+                new Rect(10, 10, 200, 20),
+                $"Bombs: ({_bombsPlaced}/{bombMax})", guiStyle);
             GUI.Label(
                 new Rect(10, Screen.height - 20, 200, 20), 
-                "Press R to reset the level");
+                "Press R to reset the level", guiStyle);
         }
     }
 }

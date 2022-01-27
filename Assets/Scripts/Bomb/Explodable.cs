@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Bomb
 {
-	[RequireComponent(typeof(ParticleSystem))]
+	// [RequireComponent(typeof(ParticleSystem))]
 	public class Explodable : MonoBehaviour
 	{
 		[SerializeField] private GameObject projectilePrefab;

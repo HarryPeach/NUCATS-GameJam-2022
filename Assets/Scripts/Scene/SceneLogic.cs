@@ -4,6 +4,7 @@ using Audio;
 using Finish_Object;
 using UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace Scene
@@ -30,6 +31,13 @@ namespace Scene
         private void Update()
         {
             if (UIShown) return;
+            
+            if (Input.GetKeyUp(KeyCode.R))
+            {
+                flags.Clear();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+            
             CheckFlags();
             
             if (!Input.GetMouseButtonUp(0)) return;
@@ -69,7 +77,9 @@ namespace Scene
             GUI.Label(
                 new Rect(10, 10, 100, 20),
                 $"Bombs: ({_bombsPlaced}/{bombMax})");
-            Debug.Log("Screen Height : " + Screen.height);
+            GUI.Label(
+                new Rect(10, Screen.height - 20, 200, 20), 
+                "Press R to reset the level");
         }
     }
 }

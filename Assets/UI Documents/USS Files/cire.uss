@@ -4,7 +4,7 @@
     position: relative;
     top: 0;
     left: 0;
-    background-color: rgb(24, 245, 215);
+    background-color: rgb(170, 141, 122);
     justify-content: center;
     align-items: center;
     border-left-width: 0;
@@ -15,6 +15,10 @@
     border-bottom-left-radius: 4px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    -unity-font: url('project://database/Assets/Fonts/SuperLegendBoy-4w8Y.ttf?fileID=12800000&guid=ebc9b18855f0d314d9a202b9424edb33&type=3#SuperLegendBoy-4w8Y');
+    -unity-font-definition: url('project://database/Assets/Fonts/SuperLegendBoy-4w8Y%20SDF.asset?fileID=11400000&guid=99e9eadb6b4c09a4bbe69fbaf07dcdcc&type=2#SuperLegendBoy-4w8Y SDF');
+    color: rgb(255, 255, 255);
+    font-size: 12px;
 }
 
 .default-button:hover {
@@ -23,7 +27,7 @@
     position: relative;
     top: 0;
     left: 0;
-    background-color: rgb(126, 255, 238);
+    background-color: rgb(197, 174, 159);
     justify-content: center;
     align-items: center;
     border-left-width: 0;
@@ -42,7 +46,7 @@
     position: relative;
     top: 0;
     left: 0;
-    background-color: rgb(25, 180, 159);
+    background-color: rgb(111, 84, 67);
     justify-content: center;
     align-items: center;
     border-left-width: 0;
@@ -60,12 +64,12 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    background-color: rgba(31, 94, 78, 0.69);
+    background-color: rgba(43, 34, 33, 0.69);
 }
 
 .card {
-    background-color: rgb(255, 255, 255);
-    width: 335px;
+    background-color: rgb(71, 58, 57);
+    width: 40%;
     align-items: center;
     justify-content: center;
     border-top-left-radius: 4px;
@@ -79,8 +83,11 @@
 }
 
 .title {
-    font-size: 18px;
+    font-size: 16px;
     -unity-font-style: bold;
     -unity-text-align: upper-center;
     white-space: normal;
+    -unity-font: url('project://database/Assets/Fonts/SuperLegendBoy-4w8Y.ttf?fileID=12800000&guid=ebc9b18855f0d314d9a202b9424edb33&type=3#SuperLegendBoy-4w8Y');
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
 }

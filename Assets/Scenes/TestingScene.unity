@@ -3854,7 +3854,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 252391541870805718, guid: 4222d67f1b691f14dad2f7ead2f46e02, type: 3}
       propertyPath: tip
-      value: "\u2605 DEBUG LEVEL \u2605"
+      value: "\u2605 DEBUG LEVEL \u2605 \\n testing <b>testing</b> <i>testing</i>\\n
+        This is an <color=orange>important</color> point"
       objectReference: {fileID: 0}
     - target: {fileID: 252391541870805719, guid: 4222d67f1b691f14dad2f7ead2f46e02, type: 3}
       propertyPath: m_RootOrder

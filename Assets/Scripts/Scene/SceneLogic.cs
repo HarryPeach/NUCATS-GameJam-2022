@@ -69,6 +69,7 @@ namespace Scene
             GUI.Label(
                 new Rect(10, 10, 100, 20),
                 $"Bombs: ({_bombsPlaced}/{bombMax})");
+            Debug.Log("Screen Height : " + Screen.height);
         }
     }
 }

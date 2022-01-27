@@ -5,6 +5,7 @@ using Finish_Object;
 using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
 namespace Scene
@@ -23,7 +24,7 @@ namespace Scene
 
         // The amount of bombs that have been placed
         private int _bombsPlaced = 0;
-        
+
         // Whether a UI screen is currently being shown
         // This is a hacky way to disable click-throughs when UI is visible
         public static bool UIShown = true;
@@ -64,9 +65,18 @@ namespace Scene
         {
             if (Camera.main is null) return;
             if (_bombsPlaced == bombMax) return;
-            
+
             Vector3 mousePos = Input.mousePosition;
             Vector3 objectPos = Camera.main.ScreenToWorldPoint(mousePos);
+            
+            // Don't let bombs be placed anywhere apart from the base tilemap
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            Debug.Log("Ag");
+            if (hit.collider == null) return;
+            Debug.Log("Ug");
+            if (hit.collider.gameObject.name != "Tilemap_Base") return;
+            Debug.Log("Ig");
+
             objectPos.z = 0;
             Instantiate(spawnPrefab, objectPos, Quaternion.identity);
             _bombsPlaced++;

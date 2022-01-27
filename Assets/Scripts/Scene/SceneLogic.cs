@@ -73,11 +73,8 @@ namespace Scene
             
             // Don't let bombs be placed anywhere apart from the base tilemap
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            Debug.Log("Ag");
             if (hit.collider == null) return;
-            Debug.Log("Ug");
             if (hit.collider.gameObject.name != "Tilemap_Base") return;
-            Debug.Log("Ig");
 
             objectPos.z = 0;
             Instantiate(spawnPrefab, objectPos, Quaternion.identity);
@@ -86,7 +83,6 @@ namespace Scene
         
         private void OnGUI()
         {
-            // GUI.skin.font = font;
             GUI.Label(
                 new Rect(10, 10, 200, 20),
                 $"Bombs: ({_bombsPlaced}/{bombMax})", guiStyle);

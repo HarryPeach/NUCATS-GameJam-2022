@@ -1,6 +1,3 @@
-using System;
-using Scene;
-using UnityEditor.Searcher;
 using UnityEngine;
 
 namespace Finish_Object

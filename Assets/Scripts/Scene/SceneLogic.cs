@@ -63,7 +63,16 @@ namespace Scene
             if (count != flags.Count) return;
             
             UIShown = true;
-            completeScreen.GetComponent<CompleteUILogic>().ShowScreen();
+            
+            if (completeScreen.TryGetComponent(typeof(CompleteUILogic), out Component compUiLogic))
+            {
+                completeScreen.GetComponent<CompleteUILogic>().ShowScreen();
+            }
+            
+            if (completeScreen.TryGetComponent(typeof(GameOverUILogic), out Component goUiLogic))
+            {
+                completeScreen.GetComponent<GameOverUILogic>().ShowScreen();
+            }
         }
 
         /// <summary>

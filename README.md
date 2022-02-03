@@ -8,6 +8,10 @@
 
 The game jam ended on January 29th, and this game **won first prize**! The code and assets here are stored for others to see and use for any of their future projects. Please note that since the game jam had such a short timeframe to work on the game, some of the code and design choices are hacky and unfinished, so that a suitable product could be submitted on time!
 
+## Playing the Game
+The game can be downloaded from its [itch.io page](https://harrypeach.itch.io/chain-reaction).
+It currently runs on Windows only.
+
 ## License
 
     Chain Reaction, a 2D strategy puzzle game
